@@ -2,7 +2,7 @@ const { response } = require('express');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const csvWriter = createCsvWriter({
-  path: 'C:/Users/jotar/OneDrive/Escritorio/datos.csv',
+  path: `${process.env.fileAddress}/${process.env.fileName}.csv`,
   header: [
     { id: 'dni', title: 'Numero de DNI', field: 'A' },   
     { id: 'grupo', title: 'Grupo', field: 'B' },
